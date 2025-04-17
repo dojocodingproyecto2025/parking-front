@@ -1,0 +1,43 @@
+.header {
+    padding: 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    justify-content: start;
+
+}
+
+.title {
+    text-align: center;
+    padding: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+nav {
+    padding: 0.5rem 1rem;
+    background-color: #e9ecef;
+    border-bottom: 1px solid #dee2e6;
+    justify-content: start;
+
+}
+
+.listh {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    justify-content: start;
+    
+}
+
+.listh li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.listh li a:hover {
+    color: #007bff;
+}
