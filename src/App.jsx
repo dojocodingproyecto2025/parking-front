@@ -1,4 +1,4 @@
-import Principal from './pages/principal'
+import Principal from './pages/Principal.jsx';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 function App() {
