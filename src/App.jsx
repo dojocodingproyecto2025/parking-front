@@ -1,5 +1,5 @@
 import Principal from './pages/Principal.jsx';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
 
