@@ -1,6 +1,6 @@
 .hero-container {
     position: relative;
-    height: 600px;
+    height: 850px;
     width: 100%;
     background-image: url('https://images.unsplash.com/photo-1607860108855-64acf2078ed9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
@@ -25,19 +25,20 @@
     position: relative;
     text-align: center;
     z-index: 1;
-    max-width: 1000px;
-    padding: 0 570px;
+    max-width: 100%;
+    padding:  0 750px;
+
   }
   
   .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
+    font-size: 4rem;
+    margin-bottom: 8rem;
+    font-weight: 500;
   }
   
   .hero-content p {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 9rem;
   }
   
   .cta-button {
@@ -52,16 +53,16 @@
   }
   
   .cta-button:hover {
-    background-color: #45a049;
+    background-color: #dde021;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 500px) {
     .hero-container {
-      height: 400px;
+      height: 500px;
     }
   
     .hero-content h1 {
-      font-size: 2rem;
+      font-size: 1rem;
     }
   
     .hero-content p {
