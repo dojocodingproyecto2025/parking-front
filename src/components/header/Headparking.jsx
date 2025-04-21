@@ -2,8 +2,7 @@ import styles from './header.module.css'
 
 
 
-
-function Header() {
+function Headparking() {
     return (
       <header className={styles.header}>
         <h1 className={styles.title}>Parking app</h1>
@@ -19,4 +18,4 @@ function Header() {
     )
   }
   
-  export default Header
+  export default Headparking

@@ -1,4 +1,4 @@
-import Principal from './pages/principal'
+import PrincipalParking from './pages/PrincipalParking'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
   return (
     <BrowserRouter> 
     <Routes>
-      <Route path='/' element = {<Principal/>}/>
+      <Route path='/' element = { <PrincipalParking/>}/>
     </Routes>
     </BrowserRouter>
       
