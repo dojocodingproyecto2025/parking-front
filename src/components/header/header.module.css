@@ -1,21 +1,22 @@
 .header {
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #252424;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     justify-content: start;
+    width: 100%;
 
 }
 
 .title {
     text-align: center;
     padding: 1rem;
-    color: #333;
+    color: #ffffff;
     margin: 0;
 }
 
 nav {
     padding: 0.5rem 1rem;
-    background-color: #e9ecef;
+    background-color: #0d73d8;
     border-bottom: 1px solid #dee2e6;
     justify-content: start;
 
@@ -27,17 +28,17 @@ nav {
     gap: 2rem;
     padding: 0;
     margin: 0;
-    justify-content: start;
+    justify-content: space-evenly;
     
 }
 
 .listh li a {
-    text-decoration: none;
+    text-decoration: bold;
     color: #333;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .listh li a:hover {
-    color: #007bff;
+    color: #c9cc16;
 }
