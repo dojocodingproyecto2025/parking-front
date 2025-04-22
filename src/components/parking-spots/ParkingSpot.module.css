@@ -1,0 +1,9 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;       /* Permite que los hijos bajen a otra fila */
+    gap: 12px;              /* Espacio entre cajones */
+    justify-content: center; /* Centra los cajones horizontalmente (opcional) */
+    padding: 20px;
+    box-sizing: border-box;
+  }
