@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import ParkingSpace from "../parking-space/ParkingSpace.jsx";
 import style from "./ParkingSpot.module.css";
+import { jwtDecode } from "jwt-decode";
 
 const ParkingSpots = () => {
+    const jwt = localStorage.getItem("jwt");
+    const decode = jwt? jwtDecode(jwt) : null;
     const spots = [
         { spotNumber: "A1", isOccupied: false },
         { spotNumber: "A2", isOccupied: true },
@@ -26,13 +29,22 @@ const ParkingSpots = () => {
       ];
 
     return(
-        <div className={style.wrapper}>
-            {
-                spots.map((spot, index) => (
-                    <ParkingSpace key={index} spot={spot.spotNumber} status={spot.isOccupied} />
-                ))
-            }
-        </div>
+        <>
+            <div>
+                <h2 style={{ textAlign: 'center', fontSize: '1.8rem', color: '#2c3e50', marginBottom: '20px' }}>
+                {
+                    decode? <p>Bienvenido {decode.name} { decode.lastName}  </p> : ""
+                }
+                </h2>
+            </div>
+            <div className={style.wrapper}>
+                {
+                    spots.map((spot, index) => (
+                        <ParkingSpace key={index} spot={spot.spotNumber} status={spot.isOccupied} />
+                    ))
+                }
+            </div>
+        </>
     )
 }
 export default ParkingSpots;

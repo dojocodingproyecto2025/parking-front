@@ -1,9 +1,8 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import styleinput  from "../style/inputStyle.module.css";
 
-const LoginPage = ({onCloseModal}) => {
+const LoginPage = ({onCloseModal, setIsModalRegisterOpen}) => {
   const {
     register,
     getValues,
@@ -35,6 +34,10 @@ const LoginPage = ({onCloseModal}) => {
     reset();
     onCloseModal();
   };
+
+  const handleModal = () => {
+    onCloseModal(true);
+  }
 
   return (
     <>
@@ -75,6 +78,7 @@ const LoginPage = ({onCloseModal}) => {
         </p>
 
         <button className={styleinput.estiloboton} onClick={createUser}>Entrar</button>
+        <p><a href="#" onClick={() => handleModal()}>Registrate</a></p>
       </div>
     </>
   );
