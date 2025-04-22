@@ -74,7 +74,7 @@ const LoginPage = ({onCloseModal}) => {
           {errors.password?.message}
         </p>
 
-        <button onClick={createUser}>Entrar</button>
+        <button className={styleinput.estiloboton} onClick={createUser}>Entrar</button>
       </div>
     </>
   );
