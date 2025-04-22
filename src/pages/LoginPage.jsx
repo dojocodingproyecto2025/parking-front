@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import styleinput  from "../style/inputStyle.module.css";
 
 const LoginPage = ({onCloseModal}) => {
   const {
@@ -47,7 +48,7 @@ const LoginPage = ({onCloseModal}) => {
       >
         <h1>Login</h1>
         <label>Email</label>
-        <input
+        <input className={styleinput.estiloinput}
           type="email"
           {...register("email", {
             required: "El Email es requerido",
@@ -62,7 +63,7 @@ const LoginPage = ({onCloseModal}) => {
         </p>
 
         <label>Contraseña</label>
-        <input
+        <input className={styleinput.estiloinput}
           type="password"
           {...register("password", {
             required: "La Contraseña es requerido",
