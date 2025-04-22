@@ -7,7 +7,6 @@ const PrincipalParking = () => {
         <>
             <Header/>
             <Hero/>
-            <h1>Hi alex</h1>
             <Footer/>
         </>
 
