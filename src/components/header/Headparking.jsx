@@ -1,10 +1,11 @@
 import styles from './header.module.css'
-
+import car  from '/src/assets/img/car.svg'
 
 
 function Headparking() {
     return (
       <header className={styles.header}>
+        <img src="{car}"/>
         <h1 className={styles.title}>Parking app</h1>
         <nav>
           <ul className={styles.listh}>
