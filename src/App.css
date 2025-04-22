@@ -7,6 +7,7 @@
 html, body, #root {
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -21,17 +22,121 @@ body {
 #root {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .App {
-  flex: 1;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 main {
   flex: 1;
-  padding: 20px;
+  width: 100%;
+  padding: var(--spacing-md);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--large-desktop);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
   width: 100%;
 }
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Flex Utilities */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Spacing Utilities */
+.p-1 { padding: var(--spacing-xs); }
+.p-2 { padding: var(--spacing-sm); }
+.p-3 { padding: var(--spacing-md); }
+.p-4 { padding: var(--spacing-lg); }
+.p-5 { padding: var(--spacing-xl); }
+
+.m-1 { margin: var(--spacing-xs); }
+.m-2 { margin: var(--spacing-sm); }
+.m-3 { margin: var(--spacing-md); }
+.m-4 { margin: var(--spacing-lg); }
+.m-5 { margin: var(--spacing-xl); }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  main {
+    padding: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--spacing-xs);
+  }
+
+  main {
+    padding: var(--spacing-xs);
+  }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+
+.hidden { display: none; }
+.block { display: block; }

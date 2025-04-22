@@ -1,33 +1,71 @@
 :root {
+  /* Colors */
+  --primary-color: #0D73D8;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --link-color: #646cff;
+  --link-hover: #535bf2;
+  --button-bg: #cf1717;
 
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Breakpoints */
+  --mobile: 320px;
+  --tablet: 768px;
+  --desktop: 1024px;
+  --large-desktop: 1440px;
+
+  /* Base styles */
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #3d57eb;
-
+  color: var(--text-color);
+  background-color: var(--primary-color);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* Reset and base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  width: 100%;
+  padding: 0;
+}
+
+html {
+  font-size: 17px;
   height: 100%;
 }
 
+body {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* Typography */
 h1 {
-  font-size: 3.2em;
+  font-size: clamp(2rem, 5vw, 3.2em);
   line-height: 1.1;
 }
 
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Buttons */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -35,27 +73,36 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #cf1717;
+  background-color: var(--button-bg);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.3s ease;
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: var(--link-color);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Media Queries */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #077adf;
-    background-color: #ffffff;
+    --text-color: #077adf;
+    --primary-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
   }
 }
