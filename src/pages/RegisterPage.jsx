@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import styleinput  from "../style/inputStyle.module.css";
 
 const RegisterPage = ({ onCloseModal }) => {
   const navigate = useNavigate();
@@ -53,7 +54,7 @@ const RegisterPage = ({ onCloseModal }) => {
       >
         <h1>Registro</h1>
         <label>Email</label>
-        <input
+        <input className={styleinput.estiloinput}
           type="email"
           {...register("email", {
             required: "El Email es requerido",
@@ -68,7 +69,7 @@ const RegisterPage = ({ onCloseModal }) => {
         </p>
 
         <label>Nombre</label>
-        <input
+        <input className={styleinput.estiloinput}
           type="text"
           {...register("name", {
             required: "El Nombre es requerido",
@@ -80,7 +81,7 @@ const RegisterPage = ({ onCloseModal }) => {
         </p>
 
         <label>Apellido</label>
-        <input
+        <input className={styleinput.estiloinput}
           type="text"
           {...register("lastName", {
             required: "El Apellido es requerido",
@@ -92,7 +93,7 @@ const RegisterPage = ({ onCloseModal }) => {
         </p>
 
         <label>Contraseña</label>
-        <input
+        <input className={styleinput.estiloinput}
           type="password"
           {...register("password", {
             required: "La Contraseña es requerido",
@@ -104,7 +105,7 @@ const RegisterPage = ({ onCloseModal }) => {
         </p>
 
         <label>Contraseña</label>
-        <input
+        <input className={styleinput.estiloinput}
           type="password"
           {...register("confirmPassword", {
             required: "La Contraseña es requerido",
@@ -115,7 +116,7 @@ const RegisterPage = ({ onCloseModal }) => {
           {errors.password?.message}
         </p>
 
-        <button onClick={createUser}>Registrarme</button>
+        <button className={styleinput.estiloboton} onClick={createUser}>Registrarme</button>
       </div>
     </>
   );
