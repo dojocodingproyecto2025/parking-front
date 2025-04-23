@@ -49,7 +49,7 @@ const LoginPage = ({onCloseModal, setIsModalRegisterOpen}) => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: "10px",
+          gap: "10px",          
         }}
       >
         <h1>Login</h1>
