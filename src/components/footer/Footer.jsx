@@ -4,7 +4,7 @@ import styles from './footer.module.css'
 function Footer() {
     return (
       <footer className={styles.footer}>
-        <h2>App project parking for conding dojo students &copy;</h2>
+        <h3>App project parking for conding dojo &copy;</h3>
       </footer>
     )
   }
