@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import styleinput  from "../style/inputStyle.module.css";
 import { useNavigate } from "react-router-dom";
 
-const LoginPage = ({onCloseModal}) => {
+const LoginPage = ({onCloseModal, setIsModalRegisterOpen}) => {
+  const navigate = useNavigate();
   const {
     register,
     getValues,
@@ -32,8 +34,13 @@ const LoginPage = ({onCloseModal}) => {
     alert("Se logueo correctamente");
     localStorage.setItem("jwt", result.data.jwt);
     reset();
+    navigate("/");
     onCloseModal();
   };
+
+  const handleModal = () => {
+    onCloseModal(true);
+  }
 
   return (
     <>
@@ -47,7 +54,7 @@ const LoginPage = ({onCloseModal}) => {
       >
         <h1>Login</h1>
         <label>Email</label>
-        <input
+        <input className={styleinput.estiloinput}
           type="email"
           {...register("email", {
             required: "El Email es requerido",
@@ -62,7 +69,7 @@ const LoginPage = ({onCloseModal}) => {
         </p>
 
         <label>Contraseña</label>
-        <input
+        <input className={styleinput.estiloinput}
           type="password"
           {...register("password", {
             required: "La Contraseña es requerido",
@@ -73,7 +80,8 @@ const LoginPage = ({onCloseModal}) => {
           {errors.password?.message}
         </p>
 
-        <button onClick={createUser}>Entrar</button>
+        <button className={styleinput.estiloboton} onClick={createUser}>Entrar</button>
+        <p><a href="#" onClick={() => handleModal()}>Registrate</a></p>
       </div>
     </>
   );
