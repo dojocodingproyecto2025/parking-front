@@ -1,0 +1,155 @@
+.successContainer {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #222; 
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .successContainer {
+        background: #1a1a1a;
+        color: #f8f8f8;
+        border: 1px solid #333;
+    }
+    
+    .confirmationMessage {
+        color: #aaa !important;
+    }
+    
+    .reservationDetails {
+        background: #2a2a2a !important;
+        border: 1px solid #444;
+    }
+    
+    .parkingSpot {
+        background: #2a2a2a;
+        border-color: #555;
+    }
+}
+
+
+.parkedCar {
+    font-size: 2rem;
+    color: #1a73e8; 
+}
+
+.reservationDetails p {
+    color: inherit;
+    margin: 0.5rem 0;
+}
+
+.loadingAnimation {
+    position: relative;
+    height: 100px;
+    margin: 2rem 0;
+}
+
+.spinner {
+    font-size: 3rem;
+    color: #4CAF50;
+    animation: spin 1.5s linear infinite;
+}
+
+.car {
+    position: absolute;
+    font-size: 2rem;
+    color: inherit; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.successAnimation {
+    margin: 2rem 0;
+}
+
+.checkIcon {
+    font-size: 4rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    animation: bounce 0.5s;
+}
+
+.parkingSpot {
+    position: relative;
+    width: 120px;
+    height: 60px;
+    margin: 0 auto;
+    background: #f0f0f0;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.parkedCar {
+    font-size: 2rem;
+    color: #2196F3;
+}
+
+.spotNumber {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #4CAF50;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.reservationDetails {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.reservationDetails p {
+    margin: 0.5rem 0;
+}
+
+.confirmationMessage {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.error {
+    color: #f44336;
+}
+
+.errorIcon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.retryButton {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}

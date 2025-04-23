@@ -1,9 +1,22 @@
 .wrapper {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;       /* Permite que los hijos bajen a otra fila */
-    gap: 12px;              /* Espacio entre cajones */
-    justify-content: center; /* Centra los cajones horizontalmente (opcional) */
-    padding: 20px;
-    box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 0.5fr);
+  gap: 20px;
+  padding: 1px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+      grid-template-columns: repeat(4, 1fr);
   }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
