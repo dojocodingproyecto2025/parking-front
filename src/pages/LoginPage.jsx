@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import styleinput  from "../style/inputStyle.module.css";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = ({onCloseModal, setIsModalRegisterOpen}) => {
+  const navigate = useNavigate();
   const {
     register,
     getValues,
@@ -32,6 +34,7 @@ const LoginPage = ({onCloseModal, setIsModalRegisterOpen}) => {
     alert("Se logueo correctamente");
     localStorage.setItem("jwt", result.data.jwt);
     reset();
+    navigate("/");
     onCloseModal();
   };
 
