@@ -1,12 +1,10 @@
 footer {
-    background-color: #928617;
-    padding: 0.5rem;
+
+    background-color: #0e0d0d;
     width: 100%;
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+    z-index: 1;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
     color: #fff;
     font-weight: 100;
