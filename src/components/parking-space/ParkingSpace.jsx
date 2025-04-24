@@ -55,7 +55,8 @@ const ParkingSpace = ({ spot, status, onStatusChange }) => {
             
             if (isConfirmed) {
                 try {
-                    await onStatusChange(spot, false);
+                    console.log(status)
+                    await onStatusChange(spot, false, null);
                     Swal.fire({
                         title: '¡Liberado!',
                         text: `Espacio ${spot} liberado con éxito`,
