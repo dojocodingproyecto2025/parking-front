@@ -25,7 +25,7 @@ export const reserveSpot = async (spotData) => {
 
 export const releaseSpot = async (spotId) => {
   try {
-    const response = await axios.delete(`${API_URL}/${spotId}`);
+    const response = await axios.delete(`${API_URL}${spotId}`);
     return response.data;
   } catch (error) {
     console.error("Error al liberar espacio:", error);
