@@ -2,12 +2,50 @@ import Swal from 'sweetalert2';
 import style from "./ParkingSpace.module.css";
 
 const ParkingSpace = ({ spot, status, onStatusChange }) => {
+    
+    const getCurrentUser = () => {
+        const jwt = localStorage.getItem('jwt');
+        if (!jwt) return null;
+        
+        try {
+            const payload = JSON.parse(atob(jwt.split('.')[1]));
+            return {
+                id: payload.userId,
+                name: payload.name,
+                lastName: payload.lastName
+            };
+        } catch (error) {
+            console.error("Error parsing JWT:", error);
+            return null;
+        }
+    };
+
     const handleClick = async () => {
+        const currentUser = getCurrentUser();
         if (status?.isOccupied) {
             // Liberar espacio
+
+            if (!currentUser) {
+                return Swal.fire({
+                    title: 'Acceso denegado',
+                    text: 'Debes iniciar sesión para liberar espacios',
+                    icon: 'error',
+                    confirmButtonText: 'Entendido'
+                });
+            }
+
+            if (currentUser.id !== status.userId) {
+                return Swal.fire({
+                    title: 'No autorizado',
+                    html: `Este espacio fue reservado por otro usuario.<br>No puedes liberarlo.`,
+                    icon: 'warning',
+                    confirmButtonText: 'Entendido'
+                });
+            }
+
             const { isConfirmed } = await Swal.fire({
                 title: 'Liberar espacio',
-                html: `¿Está seguro de liberar el espacio ${spot}?`,
+                html: `¿Está seguro de liberar el espacio ${spot}? , no se hará reembolso del dinero`,
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Sí, liberar',
