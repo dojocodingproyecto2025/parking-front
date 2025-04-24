@@ -9,8 +9,8 @@ function App() {
     <BrowserRouter> 
     <Routes>
       <Route path='/' element = { <PrincipalParking/>}/>
-      <Route path="/success" element ={ <Success />} />
-      <Route path="/canceled" element = { <Canceled />} />
+      <Route path="/success" element ={<Success />} />
+      <Route path="/canceled" element = {<Canceled />} />
     </Routes>
     </BrowserRouter>
       
