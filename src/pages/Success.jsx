@@ -66,6 +66,7 @@ const Success = () => {
 
     if (loading) {
         return (
+            <div className={styles.showAlert}>
             <div className={styles.successContainer}>
                 <div className={styles.loadingAnimation}>
                     <FaSpinner className={styles.spinner} />
@@ -73,6 +74,7 @@ const Success = () => {
                 </div>
                 <h2>Procesando tu reserva...</h2>
                 <p>Estamos guardando tu espacio de estacionamiento</p>
+            </div>
             </div>
         );
     }
@@ -83,12 +85,6 @@ const Success = () => {
                 <div className={styles.errorIcon}>⚠️</div>
                 <h2>Algo salió mal</h2>
                 <p>{error}</p>
-                <button 
-                    className={styles.retryButton}
-                    onClick={() => window.location.reload()}
-                >
-                    Reintentar
-                </button>
             </div>
         );
     }
