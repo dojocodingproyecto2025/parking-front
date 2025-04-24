@@ -16,7 +16,7 @@ export const getReservations = async () => {
 
 export const reserveSpot = async (spotData) => {
   try {
-    const socket = io("https://parking-taupe.vercel.app");
+    const socket = io("https://parking-taupe.vercel.app/");
     const response = await axios.post(API_URL, spotData);
     socket.emit("message", true);
     return response.data;
