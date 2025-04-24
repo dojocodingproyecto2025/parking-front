@@ -18,8 +18,8 @@ export const reserveSpot = async (spotData) => {
   try {
     const socket = io("https://parking-taupe.vercel.app");
     const response = await axios.post(API_URL, spotData);
-    return response.data;
     socket.emit("message", true);
+    return response.data;
   } catch (error) {
     console.error("Error al reservar espacio:", error);
     throw error;
