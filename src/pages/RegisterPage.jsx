@@ -35,6 +35,8 @@ const RegisterPage = ({ onCloseModal }) => {
       return;
     }
     var data = getValues();
+    
+    //await axios.post("http://localhost:8085/register", data);
     await axios.post("https://parking-taupe.vercel.app/register", data);
     alert("Se registro correctamente el usuario");
     // navigate("/");

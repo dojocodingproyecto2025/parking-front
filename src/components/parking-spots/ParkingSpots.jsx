@@ -6,7 +6,7 @@ import { getReservations, releaseSpot } from "../../services/reservation.js";
 import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe('pk_test_51RBokLP3TuaeObGoAKvIAzfSJmlJRL5pqSJzcRRvHteQO9nqFlYO9AnRpVRlcJMfNrxGmmTXGV3KPv2xaC2PBmQK00FlbyoeLK');
-//const url = "http://localhost:8085/api/purcharse/";
+// const url = "http://localhost:8085/api/purcharse/";
 const url = "https://parking-taupe.vercel.app/api/purcharse/"
 const ParkingSpots = () => {
     const [spots, setSpots] = useState([]);    
