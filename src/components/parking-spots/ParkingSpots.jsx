@@ -12,7 +12,7 @@ const url = "https://parking-taupe.vercel.app/api/purcharse/"
 const ParkingSpots = () => {
     const [spots, setSpots] = useState([]);    
     const [error, setError] = useState(null);
-    const socket = io("https://parking-taupe.vercel.app");
+    const socket = io("https://parking-taupe.vercel.app/");
 
     useEffect(() => {
         const loadSpots = async () => {
