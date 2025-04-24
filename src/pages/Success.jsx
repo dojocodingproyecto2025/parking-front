@@ -83,12 +83,6 @@ const Success = () => {
                 <div className={styles.errorIcon}>⚠️</div>
                 <h2>Algo salió mal</h2>
                 <p>{error}</p>
-                <button 
-                    className={styles.retryButton}
-                    onClick={() => window.location.reload()}
-                >
-                    Reintentar
-                </button>
             </div>
         );
     }
